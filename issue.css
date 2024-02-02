@@ -1,0 +1,155 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub {
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.log {
+    width: 200px;
+    height: 60vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.chat {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+p {
+    background-color: #f1f3f5;
+    margin: 7px 0 0 0;
+    padding: 3px 0 3px 0;
+    transition: all 0.5 ease;
+    width: 130px;
+}
+
+.timer {
+    width: 50px;
+    height: 24px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 7px 0 0 0;
+    background-color: #f1f3f5;
+}
+
+.chat {
+    justify-content: end;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 200px;
+}
+
+.textInput {
+    width: 100px;
+    height: 25px;
+    margin-right: 10px;
+    border: 2px solid black;
+}
+
+.buttonInput {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0px;
+    align-items: center;
+}
+
+.buttonInput:active {
+    background-color: #5c646e;
+}
+
+.questionBox {
+    width: 300px;
+    padding: 0 5px 0 5px;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: height 0.4s ease;
+    height: 188px;
+    margin: 0 0 8px 0;
+    cursor: default;
+}
+
+.title {
+    display: grid;
+    grid-template-columns: 21px 250px 22px;
+    background-color: color(display-p3 0.9304 0.4167 0.3686);
+    margin-bottom: 5px;
+    padding: 2px 5px;
+    z-index: 4;
+    border-radius: 4px;
+}
+
+.text, .popup {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.Q, .text {
+    cursor: default;
+    margin: 2px 0 0 0;
+}
+
+.popup {
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    transform: rotate(0deg);
+}
+
+.questionList {
+    transition: transform 0.4s ease;
+    height: 154px;
+    overflow-y: scroll;
+}
+
+.question {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: 14px 20px;
+    font-size: 14px;
+    margin: 2px 2px;
+    padding: 2px 5px 0 5px;
+    border-radius: 5px;
+    background-color: #f1f3f5;
+}
+.id {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    font-size: 11px;
+    padding-bottom: 5px;
+    color: #495058;
+}
+.content {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.time {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-size: 11px;
+    color: #495058;
+}
