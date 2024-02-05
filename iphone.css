@@ -1,0 +1,178 @@
+@font-face {
+    font-family: AppleSDGothicNeo;
+    font-weight: 100;
+    src: url(AppleSDGothicNeoT.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: AppleSDGothicNeo;
+    font-weight: 200;
+    src: url(AppleSDGothicNeoUL.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: AppleSDGothicNeo;
+    font-weight: 300;
+    src: url(AppleSDGothicNeoL.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: AppleSDGothicNeo;
+    font-weight: 400;
+    src: url(AppleSDGothicNeoR.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: AppleSDGothicNeo;
+    font-weight: 500;
+    src: url(font/AppleSDGothicNeoM.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: AppleSDGothicNeo;
+    font-weight: 600;
+    src: url(font/AppleSDGothicNeoSB.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: AppleSDGothicNeo;
+    font-weight: 700;
+    src: url(font/AppleSDGothicNeoB.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: AppleSDGothicNeo;
+    font-weight: 800;
+    src: url(font/AppleSDGothicNeoEB.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: AppleSDGothicNeo;
+    font-weight: 900;
+    src: url(font/AppleSDGothicNeoH.woff2) format("woff2");
+}
+
+.iphone-x {
+    font-family: 'AppleSDGothicNeo';
+    position: relative;
+    margin: 30px auto;
+    width: 277px;
+    height: 600px;
+    background-color: #565656;
+    border-radius: 33px;
+    box-shadow: 0px 0px 0px 9px #1f1f1f, 0px 0px 0px 10px #191919, 0px 0px 0px 17px #111;
+  }
+  .iphone-x:before, .iphone-x:after {
+    content: "";
+    position: absolute;
+    left:49%;
+    transform: translateX(-50%);
+  }
+  .iphone-x:after {
+    bottom: 7px;
+    width: 120px;
+    height: 4px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+  }
+  .iphone-x:before {
+    top: 0px;
+    width: 50%;
+    height: 30px;
+    background-color: #1f1f1f;
+    border-radius: 0px 0px 23px 23px;
+  }
+  .iphone-x i,
+  .iphone-x b,
+  .iphone-x s,
+  .iphone-x ic,
+  .iphone-x .header {
+    position: absolute;
+    display: block;
+    color: transparent;
+  }
+  .iphone-x i {
+    top: 0px;
+    left: 50%;
+    transform: translate(-59%, 6px);
+    height: 8px;
+    width: 13%;
+    background-color: #101010;
+    border-radius: 8px;
+    box-shadow: inset 0px -3px 3px 0px rgba(255, 255, 255, 0.2);
+  }
+  .iphone-x b {
+    left: 10%;
+    top: 0px;
+    transform: translate(135px, 4px);
+    width: 12px;
+    height: 12px;
+    background-color: #101010;
+    border-radius: 12px;
+    box-shadow: inset 0px -3px 2px 0px rgba(255, 255, 255, 0.2);
+  }
+  .iphone-x b:after {
+    content: "";
+    position: absolute;
+    background-color: #2d4d76;
+    width: 5px;
+    height: 5px;
+    top: 2px;
+    left: 2px;
+    top: 3px;
+    left: 3px;
+    display: block;
+    border-radius: 4px;
+    box-shadow: inset 0px -2px 2px rgba(0, 0, 0, 0.5);
+  }
+  .iphone-x s {
+    top: -50px;
+    left: -96px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 100;
+    padding-top: 60px;
+  }
+
+  .iphone-x ic {
+    color: white;
+    font-size: 15px;
+    top: 9px;
+    right: 15px;
+    background-color: transparent;
+  }
+
+  .iphone-x ic span {
+    font-size: inherit;
+  }
+
+  .iphone-x .header {
+    top: 36px;
+    left: 10px;
+    width: 257px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .iphone-x .header div {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+  }
+
+  .iphone-x .header div span {
+    color: white; 
+    font-size: 14px;
+    margin: 0 1px 0 3px;
+  }
+
+  .iphone-x .header div:nth-child(2) span {
+    color: white; 
+    font-size: 20px;
+    margin: 0 1px 0 3px;
+  }

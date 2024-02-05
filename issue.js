@@ -47,7 +47,7 @@ function text() {
         const questionBox = document.createElement('div')
         questionBox.className = 'questionBox'
         questionBox.setAttribute('id', `QB${groupId[newQuestion['group']]}`)
-        questionBox.setAttribute('style', 'height:73px')
+        //questionBox.setAttribute('style', 'height:73px')
 
         const question_title = document.createElement('div')
         question_title.className = 'title'
@@ -79,8 +79,12 @@ function text() {
         questionBox.append(question_title, questionList)
 
         document.getElementById('issueSub').prepend(questionBox)
+        questionBox.classList.add("animation-init");
+        setTimeout(function() {
+            questionBox.classList.add("animation-fade");
+        })
     }
-
+    //questionBox에 들어갈 question 제작
     const question = document.createElement('div')
     question.className = 'question'
 
@@ -99,18 +103,26 @@ function text() {
     question.append(question_id, question_content, question_time)
     
     document.getElementById(`Q${groupId[newQuestion['group']]}`).prepend(question)
-
+    document.getElementById(`B${groupId[newQuestion['group']]}`).style.transform = 'rotate(0deg)'
+    //끝
 
     textLog.push(newQuestion)
     const tag = document.createElement('div');
     tag.className = 'chat'
-    const te = document.createElement('p');
-    const time = document.createElement(`div`)
-    time.className = `${textLog.length.toString()} timer`
-    time.append('0초전')
-    te.append(newQuestion['text'])
-    tag.append(te, time)
+    const id = document.createElement('p');
+    id.className = 'logId'
+    const content = document.createElement(`p`)
+    content.className = 'logContent'
+    tag.setAttribute('id', `T${textLog.length.toString()}` )
+    id.append(newQuestion['nickname'])
+    content.append(newQuestion['text'])
+    tag.append(id, content)
     document.getElementById("log").prepend(tag)
+
+    tag.classList.add("animation-init-tag");
+    setTimeout(function() {
+        tag.classList.add("animation-fade-tag");
+    })
 }
 
 let timer = setInterval(function() {

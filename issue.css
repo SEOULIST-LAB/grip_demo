@@ -1,48 +1,91 @@
+body {
+    background-color: #a8a8a8;
+}
+
 .main {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: calc(100vh - 110px);
+    display: grid;
+    grid-template-columns: 360px calc(100vw - 360px);
+}
+
+.grip {
+    font-family: 'AppleSDGothicNeo';
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: start;
+    padding-left: 46px;
     align-items: center;
+    width: 80%;
+    height: 90px;
+    font-size: 25px;
 }
 
 .sub {
-    width: 50vw;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: auto;
-    flex: 1;
+    height: calc(100vh - 100px);
 }
 
 .issue {
     display: flex;
-    min-height: min-content;
     flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
 }
 
 .log {
-    width: 200px;
-    height: 60vh;
+    width: 277px;
+    height: 200px;
     overflow-y: scroll;
     display: flex;
     flex-direction: column-reverse;
+    justify-content: end;
+    align-items: center;
+}
+
+.filter {
+    display: block;
+    width: 277px;
+    height: 14px;
+    top: -10px;
+    content:"";
+    position: absolute;
+    background-color: rgba(86,86,86,0.1);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.chatting {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: center;
 }
 
 .chat {
     display: flex;
     justify-content:space-between;
     align-items: center;
+    justify-content: start;
+    width: 267px;
+}
+
+.interface {
+    position: absolute;
+    bottom: 10px;
+    color: white;
 }
 
 p {
-    background-color: #f1f3f5;
-    margin: 7px 0 0 0;
-    padding: 3px 0 3px 0;
+    background-color: transparent;
+    margin: 2px 0 0 0;
+    padding: 0px 0 3px 8px;
     transition: all 0.5 ease;
-    width: 130px;
+    height: 18px;
+    font-size: 14px;
+}
+
+.logId {
+    color: color(srgb 0.7295 0.7293 0.7381);
 }
 
 .timer {
@@ -52,11 +95,8 @@ p {
     justify-content: end;
     align-items: center;
     margin: 7px 0 0 0;
-    background-color: #f1f3f5;
-}
-
-.chat {
-    justify-content: end;
+    background-color: transparent;
+    padding: 2px 8px 0 0;
 }
 
 .input {
@@ -64,28 +104,39 @@ p {
     align-items: center;
     justify-content: center;
     height: 50px;
-    width: 200px;
+    width: 277px;
+    color: inherit;
 }
 
 .textInput {
-    width: 100px;
+    position: inherit;
+    width: 190px;
     height: 25px;
-    margin-right: 10px;
-    border: 2px solid black;
+    padding-left: 10px;
+    border: 2px solid white;
+    border-radius: 15px 0 0 15px;
+    border-width: 1px 0 1px 1px;
+    background-color: transparent;
+    color: inherit;
+}
+
+.textInput:focus {
+    outline: none;
 }
 
 .buttonInput {
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 0px;
+    position: inherit;
+    width: 41px;
+    height: 29px;
+    background-color: transparent;
+    border-radius: 0 15px 15px 0;
+    border: 2px solid white;
+    border-width: 1px 1px 1px 0;
+    color: inherit;
+    border-left: none;
+    padding: 0px 5px 0 0;
     align-items: center;
-}
-
-.buttonInput:active {
-    background-color: #5c646e;
+    cursor: pointer;
 }
 
 .questionBox {
@@ -101,6 +152,7 @@ p {
 }
 
 .title {
+    position: relative;
     display: grid;
     grid-template-columns: 21px 250px 22px;
     background-color: color(display-p3 0.9304 0.4167 0.3686);
@@ -155,8 +207,32 @@ p {
     grid-row: 2 / 3;
 }
 .time {
+    display: flex;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     font-size: 11px;
     color: #495058;
+    justify-content: end;
+}
+
+.animation-init {
+    opacity: 0;
+    height: 0px;
+}
+  
+.animation-fade {
+    opacity: 1;
+    height: 73px;
+    transition: all 0.5s ease;
+}
+
+.animation-init-tag {
+    opacity: 0;
+    height: 0px;
+}
+  
+.animation-fade-tag {
+    opacity: 1;
+    height: 20px;
+    transition: all 0.5s ease;
 }
