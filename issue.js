@@ -1,7 +1,7 @@
 let textLog = []
 let group = {}
 let groupId = {}
-let classConst = 1
+let classConst = 0
 
 function popup(num) {
     let Bid = 'B' + num;
@@ -24,13 +24,8 @@ function popup(num) {
     }
 }
 
-function text() {
-    let text = document.getElementById("textInput").value;
-    document.getElementById("textInput").value = '';
-
-    
-    let date = new Date()
-    let newQuestion = {'text' : text, 'needComment': 1, 'nickname': 'admin', 'group': text, 'date':date.getTime()}
+function addText(nickname, text, groupName, time) {
+    let newQuestion = {'text' : text, 'needComment': 1, 'nickname': nickname, 'group': groupName, 'date':time}
 
     if(newQuestion['group'] in group) {
         group[newQuestion['group']] += 1
@@ -125,6 +120,13 @@ function text() {
     })
 }
 
+function text(nickname) {
+    let text = document.getElementById("textInput").value;
+    document.getElementById("textInput").value = '';
+    let date = new Date()
+    addText(nickname, text, text, date.getTime())
+}
+
 let timer = setInterval(function() {
     let now = new Date()
     now = now.getTime()
@@ -137,4 +139,24 @@ let timer = setInterval(function() {
             }
         }
     }
-},1000)
+},1000);
+
+//mockup
+(function() {
+    console.log(1)
+    fetch("mockup.json")//json파일 읽어오기
+        .then((response) => {
+            return response.json()
+        })//읽어온 데이터를 json으로 변환
+        .then((json) => {
+            console.log(json)
+            data = json.Mockup;//json에 있는 items만 받아오기
+            data.forEach(element => {
+                console.log(element)
+                for(let i = 0 ; i < element.chats.length ; i++) {
+                    let date = new Date()
+                    addText(element.chats[i].nickname, element.chats[i].message, element.summary, date.getTime() - element.chats[i].timestamp)
+                }
+            });
+        });
+}());

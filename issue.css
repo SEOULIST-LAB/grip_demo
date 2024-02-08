@@ -1,23 +1,32 @@
 body {
     background-color: #a8a8a8;
+    margin: 0;
 }
 
 .main {
     width: 100%;
-    height: calc(100vh - 110px);
+    height: calc(100vh - 60px);
     display: grid;
     grid-template-columns: 360px calc(100vw - 360px);
+    background-color: rgb(248,248,248);
 }
 
 .grip {
     font-family: 'AppleSDGothicNeo';
     display: flex;
-    justify-content: start;
-    padding-left: 46px;
+    justify-content: space-between;
     align-items: center;
-    width: 80%;
-    height: 90px;
+    width: 100vw;
+    height: 60px;
     font-size: 25px;
+    background-color: black;
+}
+
+.logo {
+    display: flex;
+    padding: 0 0 0 46px;
+    justify-content: center;
+    align-items: center;
 }
 
 .sub {
@@ -62,11 +71,10 @@ body {
 }
 
 .chat {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    justify-content: start;
-    width: 267px;
+    display: inline;
+    text-align: left;
+    word-break: break-word;
+    width: 259px;
 }
 
 .interface {
@@ -77,15 +85,21 @@ body {
 
 p {
     background-color: transparent;
+    display: inline;
+    line-height: 1.4;
+    letter-spacing: -.28px;
     margin: 2px 0 0 0;
-    padding: 0px 0 3px 8px;
+    padding: 0px 0 4px 0px;
     transition: all 0.5 ease;
-    height: 18px;
-    font-size: 14px;
+    min-height: 18px;
+    font-size: 12px;
 }
 
 .logId {
     color: color(srgb 0.7295 0.7293 0.7381);
+    min-width: max-content;
+    min-width: -webkit-max-content;
+    padding-right: 3px;
 }
 
 .timer {
@@ -228,11 +242,11 @@ p {
 
 .animation-init-tag {
     opacity: 0;
-    height: 0px;
+    max-height: 0px;
 }
   
 .animation-fade-tag {
     opacity: 1;
-    height: 20px;
+    max-height: 100px;
     transition: all 0.5s ease;
 }
