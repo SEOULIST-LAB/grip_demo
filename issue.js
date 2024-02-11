@@ -178,7 +178,7 @@ function sendChat(text) {
         "message":text
     }
     return new Promise((resolve, reject) => {
-        fetch("http://3.38.195.39/send_chat", {
+        fetch("http://3.38.195.39/send_chat/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -191,7 +191,7 @@ function sendChat(text) {
 
 function postCluster() {
     return new Promise((resolve, reject) => {
-        fetch("http://3.38.195.39/cluster", {
+        fetch("http://3.38.195.39/cluster/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

@@ -1,55 +1,55 @@
 @font-face {
     font-family: AppleSDGothicNeo;
     font-weight: 100;
-    src: url(AppleSDGothicNeoT.woff2) format("woff2");
+    src: url('./font/AppleSDGothicNeoT.woff2') format("woff2");
 }
 
 @font-face {
     font-family: AppleSDGothicNeo;
     font-weight: 200;
-    src: url(AppleSDGothicNeoUL.woff2) format("woff2");
+    src: url('./font/AppleSDGothicNeoUL.woff2') format("woff2");
 }
 
 @font-face {
     font-family: AppleSDGothicNeo;
     font-weight: 300;
-    src: url(AppleSDGothicNeoL.woff2) format("woff2");
+    src: url('./font/AppleSDGothicNeoL.woff2') format("woff2");
 }
 
 @font-face {
     font-family: AppleSDGothicNeo;
     font-weight: 400;
-    src: url(AppleSDGothicNeoR.woff2) format("woff2");
+    src: url('./font/AppleSDGothicNeoR.woff2') format("woff2");
 }
 
 @font-face {
     font-family: AppleSDGothicNeo;
     font-weight: 500;
-    src: url(font/AppleSDGothicNeoM.woff2) format("woff2");
+    src: url('./font/AppleSDGothicNeoM.woff2') format("woff2");
 }
 
 @font-face {
     font-family: AppleSDGothicNeo;
     font-weight: 600;
-    src: url(font/AppleSDGothicNeoSB.woff2) format("woff2");
+    src: url('./font/AppleSDGothicNeoSB.woff2') format("woff2");
 }
 
 @font-face {
     font-family: AppleSDGothicNeo;
     font-weight: 700;
-    src: url(font/AppleSDGothicNeoB.woff2) format("woff2");
+    src: url('./font/AppleSDGothicNeoB.woff2') format("woff2");
 }
 
 @font-face {
     font-family: AppleSDGothicNeo;
     font-weight: 800;
-    src: url(font/AppleSDGothicNeoEB.woff2) format("woff2");
+    src: url('./font/AppleSDGothicNeoEB.woff2') format("woff2");
 }
 
 @font-face {
     font-family: AppleSDGothicNeo;
     font-weight: 900;
-    src: url(font/AppleSDGothicNeoH.woff2) format("woff2");
+    src: url('./font/AppleSDGothicNeoH.woff2') format("woff2");
 }
 
 .iphone-x {
