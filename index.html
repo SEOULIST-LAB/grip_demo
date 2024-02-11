@@ -25,7 +25,8 @@
     </div>
     <div class="main">
         <div class="chatting sub">
-            <div class="iphone-x">
+            <div class="iphone-x info">
+                <!--
                 <i>Speaker</i>
                 <b>Camera</b>
                 <s id="clock">00:00</s>
@@ -34,17 +35,15 @@
                     <span class="material-symbols-outlined">wifi</span>
                     <span class="material-symbols-outlined">battery_full_alt</span>
                 </ic>
+                -->
                 <div class="header">
                     <div>
-                        <img src="https://webapp-resource.grip.show/202402050148/public/assets/logo/img_live_logo_w_28.png" alt="live-logo" width="50">
-                        
-                        <span class="material-symbols-outlined">visibility</span>
-                        3,219
+                        Powered by
+                        <svg width="80" height="20" viewBox="0 0 124 32" fill="white"><path fill-rule="evenodd" clip-rule="evenodd" d="M38.5514 5.29688C37.1015 5.29688 35.9219 6.52933 35.9219 8.04425C35.9219 9.55917 37.1015 10.7916 38.5514 10.7916C40.0013 10.7916 41.1809 9.55917 41.1809 8.04425C41.1809 6.52933 40.0013 5.29688 38.5514 5.29688" fill="black"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M26.4531 25.0781H30.6604L30.669 16.0117H34.8762V11.8906H26.4617L26.4531 25.0781Z" fill="black"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M36.4453 25.0781H40.6439L40.6526 11.8906H36.4539L36.4453 25.0781Z" fill="black"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M49.3339 20.9572H46.4414V16.0118H49.3339C50.641 16.0118 51.7005 17.1189 51.7005 18.4846C51.7005 19.8501 50.641 20.9572 49.3339 20.9572M49.3341 11.8906H42.243L42.2344 30.2982H46.433L46.4416 25.0781H49.3341C52.8195 25.0781 55.645 22.126 55.645 18.4844C55.645 14.8427 52.8195 11.8906 49.3341 11.8906" fill="black"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.6736 11.8906V16.0116H20.4334C19.8617 19.1313 16.9487 21.5065 13.4385 21.5065C9.44478 21.5065 6.20724 18.1238 6.20724 13.9511C6.20724 9.77848 9.44478 6.39582 13.4385 6.39582C15.5023 6.39582 17.3626 7.30054 18.6801 8.74935L21.6551 5.64102C19.5757 3.39703 16.664 2 13.4385 2C7.12125 2 2 7.35069 2 13.9511C2 20.5515 7.12125 25.9022 13.4385 25.9022C19.0829 25.9022 23.769 21.6296 24.704 16.0116C24.8155 15.3419 24.877 14.6542 24.877 13.9511C24.877 13.2481 24.8155 12.5604 24.704 11.8906H15.6736Z" fill="black"></path></svg>
                     </div>
                     <div>
                         <span class="material-symbols-outlined">ios_share</span>
-                        <span class="material-symbols-outlined">more_vert</span>
-                        <span class="material-symbols-outlined">expand_more</span>
+                        <span class="material-symbols-outlined">volume_up</span>
                     </div>
                 </div>
                 <div class="interface">
@@ -54,12 +53,38 @@
                     </div>
                     <div class="input">
                         <input type="text" class="textInput" id="textInput" placeholder="메시지를 입력하세요">
-                        <button class="buttonInput" onclick="text('user')">전송</button>
+                        <button class="buttonInput" onclick="text('시청자', 'textInput')">전송</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="sub issue" id="issueSub">
+        <div class="info">
+            <div class="head">채팅</div>
+            <div class="log2" id="log2"></div>
+            <div class="interface textBox">
+                <div class="input">
+                    <input type="text" class="textInput" id="textInput2" placeholder="메시지를 입력하세요">
+                    <button class="buttonInput" onclick="text('매니저', 'textInput2')">전송</button>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="head">실시간 문의 분류</div>
+            <div class="sub issue">
+                <div id="issueSub"></div>
+                <div id="etc">
+                    <div class="questionBox animation-init animation-fade" id="QB" style="height: 473px;">
+                        <div class="title">
+                            <div class="Q">Q.</div>
+                            <div class="text">기타 문의</div>
+                            <div class="popup" id="B" onclick="popup(-1)" style="transform: rotate(0deg);">
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </div>
+                        </div>
+                        <div class ="questionList" id="Q"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

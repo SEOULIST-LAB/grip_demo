@@ -1,13 +1,36 @@
 body {
-    background-color: #a8a8a8;
+    background-color: rgb(248,248,248);
     margin: 0;
+    font-family: 'AppleSDGothicNeo';
+}
+
+.info {
+    border-radius: 5px;
+    box-shadow: 8px #282828;
+    border: 0.1px solid #dddddd;
+    margin: 30px 10px auto 10px !important;
+    background-color: rgb(255,255,255);
+    height: 630px;
+}
+
+.head {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 13px 0px 3px 10px;
+    border: 0.1px solid #dddddd;
+    border-width: 0 0 0.1px 0;
 }
 
 .main {
     width: 100%;
     height: calc(100vh - 60px);
     display: grid;
-    grid-template-columns: 360px calc(100vw - 360px);
+    grid-template-columns: 330px 370px auto;
     background-color: rgb(248,248,248);
 }
 
@@ -30,18 +53,23 @@ body {
 }
 
 .sub {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 160px);
 }
 
 .issue {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    width: 300px;
+    width: 620px;
+}
+
+#issueSub {
+    overflow-y: scroll;
+    height: 100%;
 }
 
 .log {
-    width: 277px;
+    width: 300px;
     height: 200px;
     overflow-y: scroll;
     display: flex;
@@ -50,14 +78,29 @@ body {
     align-items: center;
 }
 
+.manager {
+    color: rgb(235, 239, 154) !important;
+}
+
+.log2 {
+    width: 350px;
+    height: 520px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end;
+    align-items: center;
+    font-size: 15px;
+}
+
 .filter {
     display: block;
-    width: 277px;
+    width: 300px;
     height: 14px;
     top: -10px;
     content:"";
     position: absolute;
-    background-color: rgba(86,86,86,0.1);
+    background-color: rgba(121, 121, 121, 0.01);
     -webkit-backdrop-filter: blur(1px);
     backdrop-filter: blur(10px);
     z-index: 10;
@@ -74,7 +117,32 @@ body {
     display: inline;
     text-align: left;
     word-break: break-word;
-    width: 259px;
+    width: 280px;
+}
+
+.log2 .chat {
+    width: 320px;
+    padding-top: 10px;
+}
+
+.log2 .chat p {
+    font-size: 13px;
+}
+
+.log2 .chat .logId {
+    color: black;
+}
+
+.log2 .chat .manager {
+    color: rgb(134, 168, 237) !important;
+}
+
+.log2 .chat .logContent {
+    color: rgb(165, 165, 165);
+}
+
+.needComment .logContent {
+    color: #e57f30 !important;
 }
 
 .interface {
@@ -118,8 +186,17 @@ p {
     align-items: center;
     justify-content: center;
     height: 50px;
-    width: 277px;
+    width: 300px;
     color: inherit;
+}
+
+.textBox {
+    width: 349px;
+    border: 0.1px solid #dddddd;
+    border-width: 0.1px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .textInput {
@@ -132,6 +209,19 @@ p {
     border-width: 1px 0 1px 1px;
     background-color: transparent;
     color: inherit;
+}
+
+.textBox div .textInput {
+    color: rgb(143,143,143);
+    background-color: rgb(245,245,245);
+    width: 240px;
+    height: 30px;
+}
+
+.textBox div .buttonInput {
+    color: rgb(134, 168, 237);
+    background-color: rgb(245,245,245);
+    height: 34px;
 }
 
 .textInput:focus {
@@ -154,7 +244,7 @@ p {
 }
 
 .questionBox {
-    width: 300px;
+    width: 290px;
     padding: 0 5px 0 5px;
     overflow-y: hidden;
     display: flex;
@@ -163,12 +253,25 @@ p {
     max-height: 188px;
     margin: 0 0 8px 0;
     cursor: default;
+    transform: translateY(0px);
+}
+
+#etc .questionBox {
+    max-height: 580px;
+}
+
+#etc .questionBox .questionList {
+    max-height: 580px;
+}
+
+#etc .questionBox .title {
+    background-color: #818487;
 }
 
 .title {
     position: relative;
     display: grid;
-    grid-template-columns: 21px 250px 22px;
+    grid-template-columns: 19px 242px 22px;
     background-color: color(display-p3 0.9304 0.4167 0.3686);
     margin-bottom: 5px;
     padding: 2px 5px;
@@ -176,55 +279,60 @@ p {
     border-radius: 4px;
 }
 
-.text, .popup {
+.Q, .text, .popup {
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: stretch;
 }
 
 .Q, .text {
     cursor: default;
-    margin: 2px 0 0 0;
+    margin: 4px 0 0 0;
+    font-size: 13.5px;
 }
 
 .popup {
     cursor: pointer;
     transition: all 0.5s ease;
     transform: rotate(0deg);
+    margin: 2px 0 0 0;
 }
 
 .questionList {
     transition: all 0.4s ease;
-    max-height: 154px;
+    max-height: 157px;
     overflow-y: scroll;
+    overscroll-behavior: contain;
 }
 
 .question {
     display: grid;
     grid-template-columns: 86% 14%;
-    grid-template-rows: 14px 20px;
+    grid-template-rows: 14px auto;
     font-size: 14px;
     margin: 2px 2px;
-    padding: 2px 5px 0 5px;
+    padding: 2px 5px 3px 5px;
     border-radius: 5px;
     background-color: #f1f3f5;
+    z-index: -1;
 }
 .id {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    font-size: 11px;
+    font-size: 10px;
     padding-bottom: 5px;
     color: #495058;
 }
 .content {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    font-size: 12px;
 }
 .time {
     display: flex;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    font-size: 11px;
+    font-size: 10px;
     color: #495058;
     justify-content: end;
 }

@@ -55,12 +55,14 @@
 .iphone-x {
     font-family: 'AppleSDGothicNeo';
     position: relative;
-    margin: 30px auto;
-    width: 277px;
+    width: 300px;
     height: 600px;
     background-color: #565656;
     background-image: url('/img/background.png');
     background-position:center;
+}
+/*
+.iphone-x {
     border-radius: 33px;
     box-shadow: 0px 0px 0px 9px #1f1f1f, 0px 0px 0px 10px #191919, 0px 0px 0px 17px #111;
   }
@@ -84,6 +86,8 @@
     background-color: #1f1f1f;
     border-radius: 0px 0px 23px 23px;
   }
+*/
+
   .iphone-x i,
   .iphone-x b,
   .iphone-x s,
@@ -152,29 +156,29 @@
   }
 
   .iphone-x .header {
-    top: 36px;
+    top: 15px;
     left: 10px;
-    width: 257px;
+    width: 280px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   .iphone-x .header div {
-    color: white;
+    color: black;
     display: flex;
     align-items: center;
     font-size: 10px;
   }
 
   .iphone-x .header div span {
-    color: white; 
-    font-size: 14px;
+    color: black; 
+    font-size: 16px;
     margin: 0 1px 0 3px;
   }
 
   .iphone-x .header div:nth-child(2) span {
-    color: white; 
-    font-size: 20px;
-    margin: 0 1px 0 3px;
+    color: black; 
+    font-size: 24px;
+    margin: 0 3px 0 3px;
   }
