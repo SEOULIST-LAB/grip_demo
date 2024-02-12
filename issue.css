@@ -15,11 +15,11 @@ body {
 
 .info {
     border-radius: 5px;
-    box-shadow: 8px #282828;
     border: 0.1px solid #dddddd;
     margin: 30px 10px auto 10px !important;
     background-color: #ffffff;
     height: calc(100vh - 130px);
+    box-shadow: 1px 0.5px 3px rgb(170, 170, 170);
 }
 
 .head {
