@@ -53,10 +53,11 @@
 }
 
 .iphone-x {
-    font-family: 'AppleSDGothicNeo';
+    font-family: 'AppleSDGothicNeo', 'Apple SD Gothic Neo';
     position: relative;
     width: 300px;
-    height: 600px;
+    height: 600px !important;
+    min-height: 500px;
     background-color: #565656;
     background-image: url('./img/background.png');
     background-position:center;

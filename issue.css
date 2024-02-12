@@ -44,7 +44,6 @@ body {
 }
 
 .grip {
-    font-family: 'AppleSDGothicNeo';
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,6 +75,7 @@ body {
     overflow-y: scroll;
     height: 100%;
     margin-top: 10px;
+    margin-left: 10px;
 }
 
 .log {
@@ -94,7 +94,7 @@ body {
 
 .log2 {
     width: 350px;
-    height: 520px;
+    height: calc(100vh - 240px);
     overflow-y: scroll;
     display: flex;
     flex-direction: column-reverse;
@@ -142,6 +142,7 @@ body {
 
 .log2 .chat .logId {
     color: black;
+    font-weight: bold;
 }
 
 .log2 .chat .manager {
@@ -149,7 +150,8 @@ body {
 }
 
 .log2 .chat .logContent {
-    color: rgb(165, 165, 165);
+    /*color: rgb(165, 165, 165);*/
+    color: black;
 }
 
 .needComment .logContent {
