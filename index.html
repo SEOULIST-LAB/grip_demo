@@ -806,10 +806,11 @@
                                                 </div>
                                             </div>
                                             <div class="auth0-lock-content-body-wrapper" style="margin-top: 0px;">
+                                              <div style="font-size: 12px;color: #6a6a6a;margin-left: 10px;">Select a demo</div>
                                                 <div style="position: relative;">
                                                     <div class="wrapper">
                                                         <div class="select-btn">
-                                                          <span>Select demo</span>
+                                                          <span>grip-demo-1</span>
                                                           <span class="material-symbols-outlined">
                                                             expand_more
                                                           </span>
@@ -860,7 +861,7 @@
                 options.insertAdjacentHTML("beforeend", li);
             });
         }
-        addCountry();
+        addCountry("grip-demo-1");
         function updateName(selectedLi) {
             addCountry(selectedLi.innerText);
             wrapper.classList.remove("active");
