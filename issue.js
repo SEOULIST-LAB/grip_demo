@@ -250,7 +250,11 @@ let timer = setInterval(function() {
             data.forEach(element => {
                 for(let i = 0 ; i < element.chats.length ; i++) {
                     let date2 = new Date(element.chats[i].timestamp)
-                    addChat(element.chats[i].nickname, element.chats[i].message, element.summary,1)
+                    if(element.summary == -1) {
+                        addChat(element.chats[i].nickname, element.chats[i].message, element.summary,0)
+                    } else {
+                        addChat(element.chats[i].nickname, element.chats[i].message, element.summary,1)
+                    }
                 }
             })
         });
@@ -258,11 +262,13 @@ let timer = setInterval(function() {
 
 function deleteChild() {
     let parent
-    for(let i = -1 ; i < groupId.length-1 ; i++) {
-        parent = document.getElementById(`Q${i == -1 ? '' : i}`)
-        while(parent.firstChild) {
-            parent.removeChild(parent.firstChild)
-        }
+    parent = document.getElementById('Q')
+    while(parent.firstChild) {
+        parent.removeChild(parent.firstChild)
+    }
+    parent = document.getElementById(`issueSub`)
+    while(parent.firstChild) {
+        parent.removeChild(parent.firstChild)
     }
 }
 
