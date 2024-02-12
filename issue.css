@@ -1,8 +1,7 @@
 body {
-    background-color: rgb(248,248,248);
+    font-family: 'AppleSDGothicNeo', 'Apple SD Gothic Neo';
     margin: 0;
-    font-family: AppleSDGothicNeo;
-    font-family: 'AppleSDGothicNeo';
+    background-color: #f0f3f7;
 }
 
 .log, .log2, #issueSub, .questionList {
@@ -19,8 +18,8 @@ body {
     box-shadow: 8px #282828;
     border: 0.1px solid #dddddd;
     margin: 30px 10px auto 10px !important;
-    background-color: rgb(255,255,255);
-    height: calc(100vh - 100px);
+    background-color: #ffffff;
+    height: calc(100vh - 130px);
 }
 
 .head {
@@ -41,7 +40,7 @@ body {
     height: calc(100vh - 60px);
     display: grid;
     grid-template-columns: 330px 370px auto;
-    background-color: rgb(248,248,248);
+    background-color: #f0f3f7;
 }
 
 .grip {
@@ -52,7 +51,7 @@ body {
     width: 100vw;
     height: 60px;
     font-size: 25px;
-    background-color: black;
+    background-color: #0a093d;
 }
 
 .logo {
@@ -63,7 +62,7 @@ body {
 }
 
 .sub {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 200px);
 }
 
 .issue {
@@ -168,6 +167,10 @@ body {
     color: white;
 }
 
+.interface2 .input {
+    width: 330px!important;
+}
+
 p {
     background-color: transparent;
     display: inline;
@@ -218,7 +221,7 @@ p {
 
 .textInput {
     position: inherit;
-    width: 190px;
+    width: 230px;
     height: 25px;
     padding-left: 10px;
     border: 2px solid white;
@@ -231,7 +234,7 @@ p {
 .textBox div .textInput {
     color: rgb(143,143,143);
     background-color: rgb(245,245,245);
-    width: 240px;
+    width: 280px;
     height: 30px;
 }
 
@@ -285,15 +288,11 @@ p {
     max-height: 580px;
 }
 
-#etc .questionBox .title {
-    background-color: #818487;
-}
-
 .title {
     position: relative;
     display: grid;
     grid-template-columns: 19px 242px 22px;
-    background-color: color(display-p3 0.9304 0.4167 0.3686);
+    border: 0.1px solid #818487;
     margin-bottom: 5px;
     padding: 2px 5px;
     z-index: 4;
@@ -334,7 +333,6 @@ p {
     margin: 2px 2px;
     padding: 2px 5px 3px 5px;
     border-radius: 5px;
-    background-color: #f1f3f5;
     z-index: -1;
 }
 .id {

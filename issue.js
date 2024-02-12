@@ -16,9 +16,9 @@ function popup(num) {
         }
         if(document.getElementById(QBid).style.height =='28px') {
             if(document.getElementById(Qid).childElementCount<=13) {
-                document.getElementById(QBid).style.height = `${document.getElementById(Qid).childElementCount*40+36}px`;
+                document.getElementById(QBid).style.height = `${document.getElementById(Qid).childElementCount*37+36}px`;
             } else {
-                document.getElementById(QBid).style.height = `${14*40+36}px`;
+                document.getElementById(QBid).style.height = `${14*37+36}px`;
             }
         } else {
             document.getElementById(QBid).style.height = '28px'
@@ -35,9 +35,9 @@ function popup(num) {
         }
         if(document.getElementById(QBid).style.height =='28px') {
             if(document.getElementById(Qid).childElementCount<=3) {
-                document.getElementById(QBid).style.height = `${document.getElementById(Qid).childElementCount*40+36}px`;
+                document.getElementById(QBid).style.height = `${document.getElementById(Qid).childElementCount*37+36}px`;
             } else {
-                document.getElementById(QBid).style.height = `${4*40+36}px`;
+                document.getElementById(QBid).style.height = `${4*37+36}px`;
             }
         } else {
             document.getElementById(QBid).style.height = '28px'
@@ -53,15 +53,15 @@ function addText(nickname, text, groupName, time, needComment, cluster) {
             let childCount = document.getElementById(`Q${groupId[newQuestion['group']] == -1 ? '' : groupId[newQuestion['group']]}`).childElementCount
             if(groupId[newQuestion['group']] == -1) {
                 if(childCount<=13 ) {
-                    document.getElementById(`QB`).style.height = `${childCount*40+73}px`;
+                    document.getElementById(`QB`).style.height = `${childCount*37+73}px`;
                 } else {
-                    document.getElementById(`QB`).style.height = `${14*40+36}px`;
+                    document.getElementById(`QB`).style.height = `${14*37+36}px`;
                 }
             } else {
                 if(childCount<=3 ) {
-                    document.getElementById(`QB${groupId[newQuestion['group']]}`).style.height = `${childCount*40+73}px`;
+                    document.getElementById(`QB${groupId[newQuestion['group']]}`).style.height = `${childCount*37+73}px`;
                 } else {
-                    document.getElementById(`QB${groupId[newQuestion['group']]}`).style.height = `${4*40+36}px`;
+                    document.getElementById(`QB${groupId[newQuestion['group']]}`).style.height = `${4*37+36}px`;
                 }
             }
         } else {
@@ -227,7 +227,9 @@ let timer = setInterval(function() {
     now = now.getTime()
     for(let i = 1 ; i <= textLog.length ; i++ ) {
         for(let j = 0 ; j < document.getElementsByClassName(i.toString()).length ; j++) {
-            if(parseInt((now - textLog[i-1]['date'])/1000) >= 60) {
+            if(parseInt((now - textLog[i-1]['date'])/1000) >= 3600) {
+                document.getElementsByClassName(i.toString())[j].innerText = parseInt((now - textLog[i-1]['date'])/1000/3600) + '시간전'
+            } else if(parseInt((now - textLog[i-1]['date'])/1000) >= 60) {
                 document.getElementsByClassName(i.toString())[j].innerText = parseInt((now - textLog[i-1]['date'])/1000/60) + '분전'
             } else {
                 document.getElementsByClassName(i.toString())[j].innerText = parseInt((now - textLog[i-1]['date'])/1000) + '초전'
