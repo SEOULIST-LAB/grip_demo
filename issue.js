@@ -250,10 +250,10 @@ let timer = setInterval(function() {
             data.forEach(element => {
                 for(let i = 0 ; i < element.chats.length ; i++) {
                     let date2 = new Date(element.chats[i].timestamp)
-                    if(element.summary == -1) {
-                        addChat(element.chats[i].nickname, element.chats[i].message, element.summary,0)
+                    if(element.cluster_id == -1) {
+                        addChat(element.chats[i].nickname, element.chats[i].message,0)
                     } else {
-                        addChat(element.chats[i].nickname, element.chats[i].message, element.summary,1)
+                        addChat(element.chats[i].nickname, element.chats[i].message,1)
                     }
                 }
             })
